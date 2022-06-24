@@ -1,0 +1,13 @@
+.general {
+          overflow: hidden;
+          }
+
+.general .text{
+                bottom: 0px;
+                text-align: center;
+                }
+
+.video {
+                 position: sticky;
+                 top: 0;
+                }

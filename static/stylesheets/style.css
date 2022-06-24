@@ -1,0 +1,49 @@
+h1 {
+    text-align: center;
+    border: 1px solid black;
+    background-color: rgb(209, 237, 242)
+    }
+
+p {
+    line-height: 20px;
+    color: white;
+    }
+
+.main {
+        padding-left: 100px;
+        padding-right: 100px;
+        text-align: left;
+        }
+body  {
+      background-image: url("/static/images/seaview.jpg");
+      background-position: center center;
+      background-repeat: no repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      }
+
+/* The side navigation menu */
+.sidebar {
+          top: 122px;
+          margin: -100px;
+          padding: 0;
+          width: 100px;
+          background-color: rgb(2, 7, 93);
+          position: fixed;
+          height: 100%;
+          overflow: auto;
+          }
+
+/* Sidebar links */
+.sidebar a {
+              display: block;
+              color: white;
+              padding: 16px;
+              text-decoration: none;
+            }
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+                                background-color: rgb(1, 6, 135);
+                                color: white;
+                                }
