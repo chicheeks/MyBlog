@@ -13,11 +13,11 @@ def welcome():
 
 @app.route('/comment', methods=['GET', 'POST'])
 def commentMenu():
-    name = ''
+    name = ""
     if request.method == 'POST' and 'username' in request.form:
         name = request.form.get('username')
         comment = request.form.get('comment')
-        commentFile = open('C:\\Users\\PC\\Documents\\Websitecomments.txt', 'a')
+        commentFile = open('Websitecomments.txt', 'a')
         commentFile.write(comment + '\n by ' + name + '\n')
     return render_template('comment.html',
                            name=name)
@@ -34,4 +34,4 @@ def contactMenu():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
