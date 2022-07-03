@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Comments</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.1.0/build/pure-min.css" integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH" crossorigin="anonymous">
+
+</head>
+<body>
+
+<table class="pure-table pure-table-bordered">
+    <thead>
+        <tr>
+            {% for subfield in column_names %}
+            <th>{{ subfield }}</th>
+            {% endfor %}
+        </tr>
+    </thead>
+    <tbody>
+    {% for line in data_file.readlines() %}
+        <tr class="pure-table-odd">
+            <td>{{ line }}</td>
+         </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+</body>
+</html>
