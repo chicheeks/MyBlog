@@ -12,15 +12,15 @@
 <table class="pure-table pure-table-bordered">
     <thead>
         <tr>
-            {% for subfield in column_names %}
-            <th>{{ subfield }}</th>
-            {% endfor %}
+            <th>Name</th>
+            <th>Comments</th>
         </tr>
     </thead>
     <tbody>
     {% for line in data_file.readlines() %}
         <tr class="pure-table-odd">
-            <td>{{ line }}</td>
+            <td>{{ line.split(':')[0] }}</td>
+            <td>{{ line.split(':')[1] }}</td>
          </tr>
     {% endfor %}
     </tbody>

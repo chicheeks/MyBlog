@@ -15,7 +15,7 @@ def commentMenu():
         name = request.form.get('username')
         comment = request.form.get('comment')
         commentFile = open('Websitecomments.txt', 'a')
-        commentFile.write(comment + ' by ' + name + '\n')
+        commentFile.write(comment + ' : ' + name + '\n')
         commentFile.close()
     return render_template('comment.html',
                            name=name)
@@ -23,12 +23,7 @@ def commentMenu():
 
 @app.route('/view_comments', methods=['GET', 'POST'])
 def view_comments():
-    with open("Websitecomments.txt", "r") as data_file:
-        for line in data_file.readlines():
-            data = line.split()
-
-    return render_template('view_comments.html', column_names=['Comment by Name'],
-                           data=data, line=line, data_file=open("Websitecomments.txt", "r"))
+    return render_template('view_comments.html', data_file=open("Websitecomments.txt", "r"))
 
 
 @app.route('/progress')
