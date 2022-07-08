@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign up!</title>
+
+    <link href="{{ url_for('static', filename='stylesheets/style2.css') }}" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.1.0/build/grids-responsive-min.css" />
+
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.1.0/build/pure-min.css" integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH" crossorigin="anonymous">
+
+</head>
+<body>
+
+<form class="pure-form" method="POST">
+            <label for="name">Password</label>
+        <br>
+        <br>
+            <input type="text" name="password"
+                   placeholder="Input password"
+                   value="{{ request.form['password'] }}"/>
+        <br>
+        <br>
+            <button type="submit" class="pure-button pure-button primary" value="Submit">Sign up</button>
+        </form>
+
+    <div>
+           <h2 style="text-align: center" >{{ msg }}</h2>
+    </div>
+
+</body>
+</html>

@@ -17,8 +17,24 @@
 <div class="general">
 
     <div class="text">
+
+        <style scoped="">
+        .button-secondary {
+            color: rgb(203, 195, 227);
+            border-radius: 6px;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0);
+        }
+
+        .button-secondary {
+            background: white;
+        }
+    </style>
+
          <p style="font-family: 'Courier New', monospace"><span class="bolded">My name is Okey-Ihedi Chiamaka Deborah. 😹 Yes! I included my middle name as well. I am currently studying Mechanical Engineering at the University of Lagos, Akoka. I plan to venture into automation, mechatronics, IoT in the nearest future. Watch out for me. Hope this website was up to your taste though!</span>
              Here's my contact. I'm only available on <a href="https://wa.me/23409024593916">Whatsapp</a> and <a href="https://twitter.com/Chicheekss?s=09">Twitter</a>.</p>
+        <form action="{{ url_for('welcome') }}">
+            <button type="submit" class="button-secondary pure-button">Home</button>
+        </form>
     </div>
 
     <div class="laptop">

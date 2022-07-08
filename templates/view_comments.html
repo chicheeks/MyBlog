@@ -14,17 +14,26 @@
         <tr>
             <th>Name</th>
             <th>Comments</th>
+            <th>Time</th>
+            <th>Delete?</th>
         </tr>
     </thead>
     <tbody>
-    {% for line in data_file.readlines() %}
+    {% for visitor in visitors %}
         <tr class="pure-table-odd">
-            <td>{{ line.split(':')[0] }}</td>
-            <td>{{ line.split(':')[1] }}</td>
+            <td>{{ visitor['name'] }}</td>
+            <td>{{ visitor['comment'] }}</td>
+            <td>{{ visitor['created'] }}</td>
+            <td>
+                <form action="{{ url_for('delete', id=visitor['id']) }}" method="post">
+                     <button type="submit">Delete</button>
+                </form></td>
          </tr>
     {% endfor %}
     </tbody>
 </table>
-
+    <div>
+           <h2 style="text-align: center" >{{ msg }}</h2>
+    </div>
 </body>
 </html>
